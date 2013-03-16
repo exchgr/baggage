@@ -12,7 +12,7 @@
     %tbody
       - @hackers.each do |hacker|
         %tr
-          %td= hacker.name
+          %td= hacker.first_name + ' ' + hacker.last_name
           %td= hacker.cell
           %td= # will have items array
 - else

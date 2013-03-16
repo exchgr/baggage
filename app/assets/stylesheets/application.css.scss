@@ -32,8 +32,12 @@ h1 .btn {
   display: inline-block;
   width: 48%;
 
-  &:last-child {
-    float: left;
+  &:last-of-type {
+    float: right;
+
+    &:after {
+       clear: both;
+    }
   }
 }
 
