@@ -3,5 +3,6 @@ class HackersController < ApplicationController
   end
 
   def show
+    @hacker = Hacker.
   end
 end
