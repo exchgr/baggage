@@ -5,5 +5,10 @@
     = stylesheet_link_tag 'application', controller.controller_name, media: 'all'
     = javascript_include_tag 'application', 'app-wide', controller.controller_name
     = csrf_meta_tags
-  %body.container
-    = yield
+  %body
+    .container
+      .navbar.navbar-fixed-top
+        .navbar-inner
+          .container
+            = link_to 'Baggage', '/', class: 'brand'
+      = yield

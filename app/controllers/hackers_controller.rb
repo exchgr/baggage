@@ -14,4 +14,10 @@ class HackersController < ApplicationController
   def new
     @hacker = Hacker.new
   end
+
+  def create
+    @hacker = Hacker.new params[:hacker]
+    @hacker.save
+    redirect_to hackers_path
+  end
 end

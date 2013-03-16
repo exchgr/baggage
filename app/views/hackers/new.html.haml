@@ -1,0 +1,9 @@
+.row
+  .span4.offset4
+    %h1 Check baggage
+    = form_for @hacker do |f|
+      .half= f.text_field :name, placeholder: 'Name'
+      %br/
+      = f.text_field :cell, placeholder: 'Cell Number'
+      %br/
+      = f.submit 'Check it', class: 'btn-success btn pull-right'
