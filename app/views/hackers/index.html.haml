@@ -1,21 +1,25 @@
-%h1
-  Baggage Claim
-  = link_to 'Check baggage', new_hacker_path, class: 'btn pull-right'
+%h1 Baggage Claim
 
-- if @hackers.any?
-  %table.table.table-bordered.table-striped
-    %thead
-      %tr
-        %th Owner's Name
-        %th Cell Number
-        %th Items
-    %tbody
-      - @hackers.each do |hacker|
+= form_tag delete_many_hackers_path, method: 'delete' do
+  = link_to 'Check baggage', new_hacker_path, class: 'btn btn-primary'
+  - if @hackers.any?
+    .pull-right
+      = submit_tag 'Delete', class: 'btn btn-danger disabled', id: 'delete', confirm: 'Are you sure?'
+    %table.table.table-bordered.table-striped
+      %thead
         %tr
-          %td= hacker.first_name + ' ' + hacker.last_name
-          %td= hacker.cell
-          %td= # will have items array
-- else
-  .hero-unit
-    %h1 No baggage!
-    %p Click the button above to check some baggage in.
+          %th Owner's Name
+          %th Cell Number
+          %th Items
+      %tbody
+        - @hackers.each do |hacker|
+          %tr
+            %td
+              = check_box_tag "hacker_ids[]", hacker.id
+              = hacker.first_name + ' ' + hacker.last_name
+            %td= hacker.cell
+            %td= # will have items array
+  - else
+    .hero-unit
+      %h1 No baggage!
+      %p Click the button above to check some baggage in.

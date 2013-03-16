@@ -20,4 +20,12 @@ class HackersController < ApplicationController
     @hacker.save
     redirect_to hackers_path
   end
+
+  def delete_many
+    @hackers = Hacker.find params[:hacker_ids]
+    @hackers.each do |hacker|
+      hacker.destroy
+    end
+    redirect_to hackers_path
+  end
 end

@@ -1,5 +1,10 @@
 Baggage::Application.routes.draw do
-  resources :hackers
+  resources :hackers do
+    collection do
+      delete :delete_many
+    end
+  end
+
   get "hackers/index"
   get "hackers/show"
 
