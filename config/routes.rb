@@ -1,6 +1,6 @@
 Baggage::Application.routes.draw do
+  resources :hackers
   get "hackers/index"
-
   get "hackers/show"
 
   get "home/index"
