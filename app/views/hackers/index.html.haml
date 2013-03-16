@@ -1,3 +1,21 @@
 %h1 Hackers
 %p This page will display the list of hackers and their items.
 
+= link_to 'New hacker', new_hacker_path, class: 'btn'
+
+- if @hackers.any?
+  %table.table.table-bordered
+    %thead
+      %td Name
+      %td Cell
+      %td Items
+    %tbody
+      - @hackers.each do |hacker|
+        %tr
+          %td= hacker.name
+          %td= hacker.cell
+          %td= # will have items array
+- else
+  .hero-unit
+    %h1 No baggage!
+    %p Click the button above to check some baggage in.
