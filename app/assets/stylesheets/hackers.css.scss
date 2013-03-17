@@ -3,21 +3,23 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 table.main tbody {
-  tr:hover {
-    position: relative;
+  td {
+    vertical-align: middle;
+  }
 
+  .edit {
+    visibility: hidden;
+  }
+
+  tr:hover {
     td {
       background: #ffffcc !important;
     }
 
     .edit {
-      display: block !important;
-      position: absolute;
-      right: 0;
+      visibility: visible;
+      vertical-align: text-bottom;
+      float: right;
     }
   }
-}
-
-table.items {
-   width: 100%;
 }

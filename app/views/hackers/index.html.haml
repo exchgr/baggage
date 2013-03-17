@@ -22,6 +22,7 @@
             %td
               - if hacker.items.any?
                 = hacker.items.map do |item| item.name end.join ', '
+              = link_to 'Edit', edit_hacker_path(hacker), class: 'btn edit'
   - else
     .hero-unit
       %h1 No baggage!

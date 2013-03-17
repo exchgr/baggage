@@ -1,0 +1,12 @@
+= form_for @hacker do |f|
+  .half= f.text_field :first_name, placeholder: 'First Name'
+  .half= f.text_field :last_name, placeholder: 'Last Name'
+  %br/
+  = f.text_field :cell, placeholder: 'Cell Number'
+  %br/
+  .items
+    - if @hacker.items.any?
+      = f.fields_for :items do |item_f|
+        = item_f.text_field :name
+  %a.btn#add{href: '#'} Add Item
+  = f.submit 'Check it', class: 'btn-success btn pull-right'

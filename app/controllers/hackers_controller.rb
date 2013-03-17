@@ -22,11 +22,13 @@ class HackersController < ApplicationController
   end
 
   def edit
-    @hacker = Hacker.find params[:hacker]
+    @hacker = Hacker.find params[:id]
   end
 
   def update
-    @hacker = Hacker.find params[:hacker]
+    @hacker = Hacker.find params[:id]
+    @hacker.update_attributes params[:hacker]
+    redirect_to hackers_path
   end
 
   def delete_many
