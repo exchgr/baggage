@@ -1,3 +1,19 @@
 // Place all the styles related to the hackers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+tbody {
+  tr:hover {
+    position: relative;
+
+    td {
+      background: #ffffcc !important;
+    }
+
+    .edit {
+      display: block !important;
+      position: absolute;
+      right: 0;
+    }
+  }
+}

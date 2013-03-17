@@ -21,6 +21,14 @@ class HackersController < ApplicationController
     redirect_to hackers_path
   end
 
+  def edit
+    @hacker = Hacker.find params[:hacker]
+  end
+
+  def update
+    @hacker = Hacker.find params[:hacker]
+  end
+
   def delete_many
     @hackers = Hacker.find params[:hacker_ids]
     @hackers.each do |hacker|
