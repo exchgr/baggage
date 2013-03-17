@@ -16,6 +16,6 @@ $ ->
   )
 
   $('form').on('click touchstart', 'a#add', (e) ->
-    $('.items').append('<input type="text" placeholder="New Item" name="hacker[items][]" />')
+    $('.items').append('<input type="text" placeholder="New Item" name="hacker[items_attributes][][name]" />')
     e.preventDefault()
   )
