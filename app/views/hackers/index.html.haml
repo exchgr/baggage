@@ -21,7 +21,8 @@
             %td= hacker.cell
             %td
               - if hacker.items.any?
-                = hacker.items.map do |item| item.name end.join ', '
+                - hacker.items.map do |item|
+                  %span.label= item.name
               = link_to 'Edit', edit_hacker_path(hacker), class: 'btn edit'
   - else
     .hero-unit
