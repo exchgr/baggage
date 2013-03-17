@@ -19,7 +19,9 @@
               &nbsp;
               = hacker.first_name + ' ' + hacker.last_name
             %td= hacker.cell
-            %td= # will have items array
+            %td
+              - if hacker.items.any?
+                = hacker.items.map do |item| item.name end.join ', '
   - else
     .hero-unit
       %h1 No baggage!
