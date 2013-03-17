@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130316204521) do
+ActiveRecord::Schema.define(:version => 20130317034108) do
 
   create_table "hackers", :force => true do |t|
     t.string   "cell"
@@ -20,5 +20,14 @@ ActiveRecord::Schema.define(:version => 20130316204521) do
     t.string   "first_name"
     t.string   "last_name"
   end
+
+  create_table "items", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "hacker_id"
+  end
+
+  add_index "items", ["hacker_id"], :name => "index_items_on_hacker_id"
 
 end

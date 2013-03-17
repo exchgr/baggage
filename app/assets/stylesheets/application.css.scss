@@ -24,7 +24,7 @@ body {
   height: 28px;
 }
 
-table, .hero-unit {
+table.main, .hero-unit {
   margin-top: 1em;
 }
 
@@ -34,7 +34,7 @@ input[type='checkbox'] {
 
 .half {
   display: inline-block;
-  width: 48%;
+  width: 49%;
 
   &:last-of-type {
     float: right;

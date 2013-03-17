@@ -14,3 +14,8 @@ $ ->
       $('#delete').addClass 'disabled'
       $('#delete').attr('disabled', 'disabled')
   )
+
+  $('form').on('click touchstart', 'a#add', (e) ->
+    $('.items').append('<input type="text" placeholder="New Item" name="hacker[items][]" />')
+    e.preventDefault()
+  )

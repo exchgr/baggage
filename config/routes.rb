@@ -3,6 +3,7 @@ Baggage::Application.routes.draw do
     collection do
       delete :delete_many
     end
+    resources :items
   end
 
   get "hackers/index"
