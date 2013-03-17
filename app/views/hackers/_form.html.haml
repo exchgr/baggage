@@ -1,6 +1,6 @@
 = form_for @hacker do |f|
   .half= f.text_field :first_name, placeholder: 'First Name'
-  .half= f.text_field :last_name, placeholder: 'Last Name'
+  .half.pull-right= f.text_field :last_name, placeholder: 'Last Name'
   %br/
   = f.text_field :cell, placeholder: 'Cell Number'
   %br/

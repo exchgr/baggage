@@ -21,7 +21,7 @@ body {
 .row input[type='text'] {
   @include box-sizing(border-box);
   width: 100%;
-  height: 28px;
+  height: 30px;
 }
 
 table.main, .hero-unit {
@@ -35,14 +35,6 @@ input[type='checkbox'] {
 .half {
   display: inline-block;
   width: 49%;
-
-  &:last-of-type {
-    float: right;
-
-    &:after {
-       clear: both;
-    }
-  }
 }
 
 .hidden {
