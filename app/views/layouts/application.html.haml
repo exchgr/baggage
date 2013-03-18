@@ -10,5 +10,9 @@
       .navbar.navbar-fixed-top
         .navbar-inner
           .container
-            = link_to 'Baggage', '/', class: 'brand'
+            = link_to '/', class: 'brand' do
+              %i.icon-plane
+              Baggage
+            %ul.nav.pull-right
+              %li= link_to 'Github!', 'https://github.com/exchgr/baggage'
       = yield
